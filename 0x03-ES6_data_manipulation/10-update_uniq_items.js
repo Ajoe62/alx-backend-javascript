@@ -1,14 +1,14 @@
-/**
- * Retrieves a map of grocery names and their quantity.
- * @returns {Map<string, Number>}
- */
-export default function groceriesList() {
-  const values = [
-    ['Apples', 10],
-    ['Tomatoes', 10],
-    ['Pasta', 1],
-    ['Rice', 1],
-    ['Banana', 5],
-  ];
-  return new Map(values);
+/* eslint-disable no-param-reassign */
+export default function updateUniqueItems(map) {
+  if (map instanceof Map) {
+    for (const [key, value] of map) {
+      if (value === 1) {
+        map.set(key, 100);
+      }
+    }
+
+    return map;
+  }
+
+  throw new Error('Cannot process');
 }
