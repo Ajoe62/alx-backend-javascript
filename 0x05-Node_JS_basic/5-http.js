@@ -1,4 +1,4 @@
-//importing the required modules
+// importing the required modules
 const http = require('http');
 const fs = require('fs');
 
@@ -114,5 +114,5 @@ app.on('request', (req, res) => {
 app.listen(PORT, HOST, () => {
   process.stdout.write(`Server listening at -> http://${HOST}:${PORT}\n`);
 });
-//exporting the module
+// exporting the module
 module.exports = app;
